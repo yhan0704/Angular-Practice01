@@ -3,5 +3,14 @@
 <button (click)="showAndHide()">Click Me</button>
 <br>
 <br>
-<p *ngIf="toggle" [style.font-size.px]="'30'">This is a Excersice page</p>
+
+
+<p *ngFor="let item of arrays let i = index"
+    [ngStyle]="{backgroundColor:i%2==1?'grey':'transparency'}">
+    {{item}}
+</p>
 {{clickCount}}
+
+<!-- <p *ngIf="toggle" [style.font-size.px]="'30'">This is a Excersice page</p>
+{{clickCount}} -->
+

@@ -11,12 +11,14 @@ export class ExerciseComponent implements OnInit {
 
   public toggle = true;
   public clickCount = 0;
-  public array = [];
+  public arrays = [];
 
   showAndHide(){
     this.toggle = !this.toggle;
     this.clickCount += 1;
-    this.array.push(this.clickCount);
+    let newDate = new Date();
+    this.arrays.push(newDate);
+    console.log(this.arrays);
   }
 
   ngOnInit(): void {
